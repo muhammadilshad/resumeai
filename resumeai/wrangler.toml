@@ -1,0 +1,19 @@
+name = "resumeai"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[env.production]
+name = "resumeai-prod"
+route = "resumeai.com/*"
+zone_id = ""
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**/*.ts"]
+
+[build.upload]
+format = "service-worker"
